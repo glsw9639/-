@@ -31,3 +31,12 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+android {
+	compileOptions {
+		sourceCompatibility JavaVersion.VERSION_1_8
+		targetCompatibility JavaVersion.VERSION_1_8
+		// '-parameters' 플래그를 사용하여 메서드 매개변수 이름 보존 활성화
+		options.compilerArgs += ["-parameters"]
+	}
+}
